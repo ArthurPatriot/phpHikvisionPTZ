@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CamTest - PTZ</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet" type="text/css">
+    <style>
+        .button_cam {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #2ecc70;
+    padding: 8px 12px 8px 12px;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.button_cam:hover {
+    background: #16a084;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+<!--  Camera PTZ example button control  -->
+    <div style="text-align:center;">
+<div style="padding-bottom: 10px;">
+        <button id="cam_zoom_m" class="button_cam"><i class="fa fa-search-minus" aria-hidden="true"></i></button>
+        <button id="cam_up" class="button_cam"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+        <button id="cam_zoom_p" class="button_cam"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+    </div>
+<div style="padding-bottom: 10px;">
+        <button id="cam_left" class="button_cam"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <button id="cam_home" class="button_cam"><i class="fa fa-home" aria-hidden="true"></i></button>
+        <button id="cam_right" class="button_cam"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    </div>
+<div style="padding-bottom: 10px;">
+        <button id="cam_pos1" class="button_cam"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+        <button id="cam_down" class="button_cam"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+        <button id="cam_pos2" class="button_cam"><i class="fa fa-heart" aria-hidden="true"></i></button>
+    </div>
+</div>
+
+
+<!--  Camera PTZ send post  -->
+    <script>
+        $(document).ready(function() {
+
+            $('#cam_right').click(function () {
+                $.post('cam/cam_right.php');
+            });
+
+            $('#cam_left').click(function () {
+                $.post('cam/cam_left.php');
+            });
+
+            $('#cam_up').click(function () {
+                $.post('cam/cam_up.php');
+            });
+
+            $('#cam_down').click(function () {
+                $.post('cam/cam_down.php');
+            });
+
+            $('#cam_zoom_p').click(function () {
+                $.post('cam/cam_zoom_p.php');
+            });
+
+            $('#cam_zoom_m').click(function () {
+                $.post('cam/cam_zoom_m.php');
+            });
+
+            $('#cam_home').click(function () {
+                $.post('cam/cam_home.php');
+            });
+
+            $('#cam_pos1').click(function () {
+                $.post('cam/cam_pos1.php');
+            });
+
+            $('#cam_pos2').click(function () {
+                $.post('cam/cam_pos2.php');
+            });
+
+        });
+    </script>
+    
+</body>
+</html>
