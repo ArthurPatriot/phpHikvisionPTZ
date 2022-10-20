@@ -10,9 +10,3 @@ Edit all script files. And replace - login, password, ip and port - from your Hi
 
 ### Contact
 If you have any requests or have problems, please contact me.
-
-Email - arthur.patriot@gmail.com
-
-Telegram - https://t.me/ArthurPatriot
-
-Or site - https://AllSteeply.com
